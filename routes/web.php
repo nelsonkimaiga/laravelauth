@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//Get route
+Route::get('login', function () {
+    return view::make('login');
 });
+
+Auth::routes();
+
+Route::post('login', 'accountController@login');
